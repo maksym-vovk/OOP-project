@@ -1,0 +1,254 @@
+body {
+    background-color: rgba(0,0,0,0.8);
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto 40px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 0;
+}
+
+.header-logo {
+    text-decoration: none;
+}
+
+.header-logo-first {
+    border: 2px solid #b8860b;
+    padding: 2px 8px;
+    letter-spacing: normal;
+    margin-right: 5px;
+
+}
+
+.header-logo-text {
+    font-family: sans-serif;
+    font-size: 25px;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    color: #b8860b;
+}
+
+.header-logo:hover .header-logo-first {
+    border: 2px solid #b8a80e;
+}
+
+.header-logo:hover .header-logo-text {
+    color: #b8a80e;
+}
+
+.header-btn {
+    cursor: pointer;
+
+}
+
+.header-btn-text {
+    font-family: sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    background-color: #b8860b;
+    padding: 10px 15px;
+    border-radius: 6px;
+    color: #252525;
+}
+
+.header-btn-text:hover {
+    background-color: #b8a80e;
+}
+
+.cards-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, minmax(100px, 200px));
+    margin: 20px 40px;
+    background-color: rgba(0,0,0,0.4);
+    position: relative;
+    align-items: start;
+    justify-items: center;
+}
+
+.cards-no-item {
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #b8860b;
+    grid-column: 2/4;
+    grid-row: 3;
+    justify-self: center;
+    padding: 40px 0;
+}
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.4);
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+}
+
+.modal-container {
+    margin: auto 20px;
+}
+
+.modal-block {
+    width: 800px;
+    padding: 20px 0;
+    border-radius: 6px;
+    background-color: #fff;
+}
+
+.modal-close {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.modal-close-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.modal-close-btn::before, .modal-close-btn::after {
+    display: block;
+    content: "";
+    width: 20px;
+    border-top: 2px solid #b8860b;
+}
+
+.modal-close-btn::before {
+    transform: rotate(50deg);
+    transform-origin: center;
+}
+
+.modal-close-btn::after {
+    transform: rotate(-50deg);
+    transform-origin: 8px 0;
+}
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form-select {
+    font-size: 15px;
+    color: #b8860b;
+    width: 100%;
+    outline: none;
+    border: 1px solid #b8860b;
+    border-radius: 3px;
+}
+
+.modal-form-input {
+    font-size: 15px;
+    width: 70%;
+    color: #b8860b;
+    margin-top: 15px;
+    padding-left: 7px;
+    border: 1px solid #b8860b;
+    border-radius: 3px;
+    outline-color: #b8a80e;
+    text-overflow: ellipsis;
+}
+
+.modal-form-text {
+    font-family: sans-serif;
+    font-size: 13px;
+    color: grey;
+    margin: 15px 0;
+}
+
+.modal-form-area {
+    font-size: 15px;
+    color: #b8860b;
+    margin-top: 15px;
+    padding-left: 7px;
+    height: 100px;
+    resize: none;
+    border: 1px solid #b8860b;
+    border-radius: 3px;
+    outline-color: #b8a80e;
+    text-overflow: ellipsis;
+}
+
+.modal-create-block {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+
+.modal-create-btn {
+    font-family: sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    border-radius: 6px;
+    color: white;
+    background-color: #b8860b;
+    outline: none;
+}
+
+.modal-create-btn:hover {
+    background-color: #b8a80e;
+}
+
+.visit-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #b8860b;
+    padding: 10px;
+    width: 200px;
+    border: 1px solid rgba(0,0,0,0.8);
+}
+
+.visit-card .close-btn {
+    background-color: transparent;
+    border: none;
+    align-self: flex-end;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.visit-card .hidden-block {
+    overflow: hidden;
+    max-height: 300px;
+    transition: max-height .7s;
+    margin: 10px 0;
+}
+
+.hidden-block p {
+    margin: 2px 0;
+}
+
+.hidden-block.hidden {
+    max-height: 0;
+}
+
+.show-more {
+    text-align: center;
+    align-self: stretch;
+    cursor: pointer;
+    font-weight: bold;
+}
